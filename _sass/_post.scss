@@ -1,0 +1,58 @@
+// Posts
+// <div class="post">
+//   <a href="{{ post.url | prepend: site.baseurl }}" class="post-link">
+//     <h3 class="post-title">{{ post.title }}</h3>
+//     <p class="post-summary">{{ post.summary }}</p>
+//     <p class="post-meta">
+//       <div class="author">
+//         <span>by </span><a href="{{ author.twitter }}">{{ author.display_name }}</a>
+//       </div>
+//       .post-date
+//       {{ post.date | date: "%b %-d, %Y" }}
+//     </p>
+//   </a>
+// </div>
+
+.post {
+  border-bottom: 1px solid rgba(228, 229, 233, 0.96);
+  margin-bottom: 3rem;
+  padding-bottom: 3rem;
+
+  .post-title {
+    color:rgba(46, 48, 58, 0.96);
+    font-size: 1.5rem;
+    &:hover {
+      color:$seriousfox-color;
+    }
+  }
+  .post-summary {
+    color: rgba(142, 146, 166, 0.96);
+    font-size: 1em;
+    line-height: 1.75;
+    margin: .75rem 0;
+  }
+
+  .post-meta {
+    color: rgba(91, 95, 115, 0.96);
+    .author {
+      display:inline-block;
+      &:before {
+        content: 'by';
+        font-style: italic;
+      }
+    }
+    .post-date {
+      display:inline-block;
+    }
+    .tags {
+      display:inline-block; 
+    }
+
+    padding-bottom: 3rem;
+    text-align: center;
+
+    padding-bottom: 0;
+    text-align: left;
+    width: auto;
+  }
+}

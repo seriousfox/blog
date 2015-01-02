@@ -3,15 +3,22 @@ layout: default
 ---
 
 <div class="home">
-
   <div class="posts">
     {% for post in paginator.posts %}
+      {% assign author = site.authors[post.author] %}
       <div class="post">
         <a href="{{ post.url | prepend: site.baseurl }}" class="post-link">
-          <p class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</p>
           <h3 class="h2 post-title">{{ post.title }}</h3>
           <p class="post-summary">{{ post.summary }}</p>
         </a>
+        <div class="post-meta">
+          <div class="author">
+            <a href="{{ author.twitter }}">{{ author.display_name }}</a>
+          </div>
+          <div class="post-date">
+            {{ post.date | date: "%B %-d, %Y" }}  
+          </div>
+        </div>
       </div>
     {% endfor %}
   </div>

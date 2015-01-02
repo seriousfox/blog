@@ -1,0 +1,39 @@
+---
+# The scss file which include files from _sass/
+---
+
+@charset "utf-8";
+
+@import "bourbon/bourbon";
+@import "grid-settings";
+@import "neat/neat";
+@import "base/base";
+@import "variables";
+@import "post";
+
+body {
+  font-size: 1.2em;
+}
+
+.container {
+  @include outer-container;
+}
+
+.blog-header {
+  margin: 40px 0;
+  padding-bottom: 40px;
+  text-align: center;
+  border-bottom: thin solid $border-color;
+}
+
+.logo {
+  background:url('/images/perfectfox.svg') no-repeat;
+  background-color: $seriousfox-color;
+  display: inline-block;
+  color: rgb(99, 166, 159);
+  width: 150px;
+  height: 150px;
+}
+
+// styling for code
+@import "solarized-dark";

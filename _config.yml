@@ -1,13 +1,37 @@
 # Site settings
-title:       Pixyll
+title:       The Serious Fox Labs
 email:       your_email@example.com
-author:      John Otander
-description: "A simple, beautiful theme for Jekyll that emphasizes content rather than aesthetic fluff."
+author:      Serious Fox HQ
+description: "Writings from the Serious Fox Team, makers of Matterhorn, Meta Trails and superb apps for our clients"
 baseurl:     ""
-url:         "http://pixyll.com"
+url:         "/"
+
+# Authors
+authors:
+  josh:
+    name: Josh Crowder
+    display_name: Josh
+    email: josh@seriousfox.co.uk
+    twitter: joshcrowder
+  alex:
+    name: Alex Handley
+    display_name: Alex
+    email: alex@seriousfox.co.uk
+    twitter: alex_handley
+  linnea:
+    name: Linnea Strid
+    display_name: Linnea
+    email: linnea@seriousfox.co.uk
+    twitter: baboli
+  marin:
+    name: Marin Le Maignan
+    display_name: Marin
+    email: marin@seriousfox.co.uk
+    twitter: seriousfoxhq
+
 
 # Google analytics
-google_analytics:
+google_analytics: UA-44214769-6
 
 # Optional features
 animated:           false
@@ -20,9 +44,9 @@ disqus_shortname:
 
 # Social icons
 show_social_icons: false
-github_username:
+github_username: seriousfox
 stackoverflow_id:
-twitter_username:
+twitter_username: seriousfoxhq
 google_plus_id:
 linkedin_username:
 bitcoin_url:
