@@ -3,7 +3,6 @@ layout:     post
 title:      A New Year, a new Serious Fox
 date:       2015-01-01 15:31:19
 summary:    Pixyll is a simple, beautiful theme for Jekyll that emphasizes content rather than aesthetic fluff.
-categories: jekyll pixyll
 author:     marin
 ---
 

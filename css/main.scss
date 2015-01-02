@@ -7,12 +7,16 @@
 @import "bourbon/bourbon";
 @import "grid-settings";
 @import "neat/neat";
-@import "base/base";
 @import "variables";
+@import "base/base";
 @import "post";
 
 body {
   font-size: 1.2em;
+  -webkit-font-smoothing: antialiased;
+  color: rgba(46, 48, 58, 0.96);
+  font-family: "ff-tisa-web-pro",serif;  
+  line-height: 1.5em;
 }
 
 .container {
@@ -34,6 +38,7 @@ body {
   width: 150px;
   height: 150px;
 }
+
 
 // styling for code
 @import "solarized-dark";
