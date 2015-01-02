@@ -9,10 +9,15 @@
 @import "neat/neat";
 @import "base/base";
 @import "variables";
+
+@import "pagination";
 @import "post";
+
 
 body {
   font-size: 1.2em;
+  margin:0;
+  padding:0;
 }
 
 .container {
@@ -33,6 +38,26 @@ body {
   color: rgb(99, 166, 159);
   width: 150px;
   height: 150px;
+}
+
+
+footer {
+  margin-top: 40px;
+  border-top: thin solid #f3f3f3;
+}
+
+footer,
+footer .wrap {
+  color: #7a7a7a;
+  background-color: #fafafa;
+  font-family: 'Lato', 'Helvetica Neue', Helvetica, sans-serif;
+  font-weight: 300;
+  clear: both;
+}
+
+footer:after {
+  content: "";
+  display: block;
 }
 
 // styling for code
