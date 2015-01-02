@@ -1,3 +1,12 @@
+html, body {
+  height: 100%;
+}
+
+img {
+  width: auto;
+  max-width: 100%;
+}
+
 body {
   -webkit-font-smoothing: antialiased;
   background-color: $base-background-color;
@@ -5,6 +14,14 @@ body {
   font-family: $base-font-family;
   font-size: $base-font-size;
   line-height: $base-line-height;
+
+  font-size: 1.2em;
+  -webkit-font-smoothing: antialiased;
+  color: rgba(46, 48, 58, 0.96);
+  font-family: "ff-tisa-web-pro",serif;  
+  line-height: 1.5em;
+  margin:0;
+  padding:0;
 }
 
 h1,
@@ -76,11 +93,39 @@ picture {
   max-width: 100%;
 }
 
+abbr {
+  border-bottom: 1px black dotted;
+  cursor: help;
+}
+
+pre, code {
+  font-family: Menlo, Monaco, "Courier New", monospace
+}
+
+code {
+  color: #7a7a7a;
+}
+
+pre {
+  padding: 1.125em;
+  font-size: 1.125rem;
+  line-height: 1.11;
+  overflow-x: scroll;
+  margin-bottom: 0.88em;
+}
+
 blockquote {
-  border-left: 2px solid $base-border-color;
-  color: lighten($base-font-color, 15);
-  margin: $base-spacing 0;
-  padding-left: $base-spacing / 2;
+  padding: 1.33em;
+  font-style: italic;
+  border-left: 5px solid #7a7a7a;
+}
+
+blockquote footer {
+  font-size: .85rem;
+  font-style: normal;
+  background-color: #fff;
+  color: #7a7a7a;
+  border-color: transparent;
 }
 
 cite {

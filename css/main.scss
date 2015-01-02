@@ -8,27 +8,11 @@
 @import "grid-settings";
 @import "neat/neat";
 @import "variables";
-<<<<<<< HEAD
+
 @import "base/base";
-=======
-
 @import "pagination";
->>>>>>> tumblr-import
+
 @import "post";
-
-
-body {
-  font-size: 1.2em;
-<<<<<<< HEAD
-  -webkit-font-smoothing: antialiased;
-  color: rgba(46, 48, 58, 0.96);
-  font-family: "ff-tisa-web-pro",serif;  
-  line-height: 1.5em;
-=======
-  margin:0;
-  padding:0;
->>>>>>> tumblr-import
-}
 
 .container {
   @include outer-container;
@@ -50,9 +34,6 @@ body {
   height: 150px;
 }
 
-
-<<<<<<< HEAD
-=======
 footer {
   margin-top: 40px;
   border-top: thin solid #f3f3f3;
@@ -72,6 +53,10 @@ footer:after {
   display: block;
 }
 
->>>>>>> tumblr-import
+.highlight .p {
+  font-size: 1.125rem;
+  line-height: 1;
+}
+
 // styling for code
-@import "solarized-dark";
+@import "solarized-light";
