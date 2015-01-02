@@ -32,6 +32,11 @@
   color: rgb(99, 166, 159);
   width: 150px;
   height: 150px;
+  background-size: 100%;
+  @include media(max-width 1200px) {
+    width:100px;
+    height:100px;
+  }
 }
 
 footer {

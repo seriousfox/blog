@@ -136,3 +136,12 @@ cite {
     content: "\2014 \00A0";
   }
 }
+
+.gist,
+.gist .highlight .p {
+  font-size: .75rem;
+}
+
+.gist .lines {
+  width: 100%;
+}
