@@ -1,0 +1,50 @@
+---
+# The scss file which include files from _sass/
+---
+
+@charset "utf-8";
+
+@import "bourbon/bourbon";
+@import "grid-settings";
+@import "neat/neat";
+@import "mixins";
+@import "variables";
+@import "icon-variables";
+
+@import "base/base";
+@import "pagination";
+
+@import "home";
+@import "post";
+@import "typography";
+
+.container {
+  @include outer-container;
+}
+
+footer {
+  margin-top: 40px;
+  border-top: thin solid #f3f3f3;
+}
+
+footer,
+footer .wrap {
+  color: #7a7a7a;
+  background-color: #fafafa;
+  font-family: 'Lato', 'Helvetica Neue', Helvetica, sans-serif;
+  font-weight: 300;
+  clear: both;
+}
+
+footer:after {
+  content: "";
+  display: block;
+}
+
+.highlight .p {
+  font-size: 1.125rem;
+  line-height: 1;
+}
+
+// styling for code
+@import "solarized-light";

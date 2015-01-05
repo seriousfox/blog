@@ -1,0 +1,14 @@
+<header class="blog-header">
+  <a href="{{ site.url }}" class="logo"></a>
+  <h1>
+    The Serious Foxprints
+  </h1>
+  <h5 class="blog-by">Written by the team at <a href="http://www.seriousfox.co.uk/" target="_blank">Serious Fox</a></h5>
+  <div class="team-row">
+    {% for author in site.authors %}
+      <a href="https://twitter.com/{{ site.authors[author.first].twitter }}" class="team-image {{ site.authors[author.first].display_name }} {{ site.authors[author.first].active }}">
+        <img src="{{ site.authors[author.first].avatar }}" alt="">
+      </a>
+    {% endfor %}
+  </div>
+</header>

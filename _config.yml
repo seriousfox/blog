@@ -1,0 +1,82 @@
+# Site settings
+title:       The Seriousprints
+email:       your_email@example.com
+author:      Serious Fox HQ
+description: "Writings from the Serious Fox Team: makers of Matterhorn, Meta Trails and superb apps for our clients"
+url: "http://seriousfox.github.io"
+
+# Authors
+authors:
+  josh:
+    name: Josh Crowder
+    display_name: Josh
+    email: josh@seriousfox.co.uk
+    twitter: joshcrowder
+    avatar: "/images/team/josh.png"
+    active: ""
+  alex:
+    name: Alex Handley
+    display_name: Alex
+    email: alex@seriousfox.co.uk
+    twitter: alex_handley
+    avatar: "/images/team/alex.png"
+    active: ""
+  linnea:
+    name: Linnea Strid
+    display_name: Linnea
+    email: linnea@seriousfox.co.uk
+    twitter: babolili
+    avatar: "/images/team/linnea.png"
+    active: ""
+  marin:
+    name: Marin Le Maignan
+    display_name: Marin
+    email: marin@seriousfox.co.uk
+    twitter: seriousfoxhq
+    avatar: "/images/team/marin.png"
+    active: ""
+  ale:
+    name: Alessandro Marin
+    display_name: Alessandro
+    twitter: seriousfoxhq
+    avatar: "/images/team/ale.png"
+    active: ""
+  allison:
+    name: Allison Hadland
+    display_name: Allison
+    twitter: HEREthenThere
+    avatar: "/images/team/fox.png"
+    active: "inactive"
+
+# Google analytics
+google_analytics: UA-44214769-6
+
+# Optional features
+animated:           false
+show_related_posts: false
+show_post_footers:  false
+
+# Disqus post comments
+# (leave blank to disable Disqus)
+disqus_shortname:
+
+# Social icons
+show_social_icons: false
+github_username: seriousfox
+stackoverflow_id:
+twitter_username: seriousfoxhq
+google_plus_id:
+linkedin_username:
+bitcoin_url:
+paypal_url:
+flattr_button:
+
+# Build settings
+markdown:     redcarpet
+redcarpet:
+  extensions: ['smart', 'tables', 'with_toc_data']
+permalink:    pretty
+paginate:     10
+sass:
+  compressed: true
+

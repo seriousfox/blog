@@ -1,0 +1,47 @@
+---
+layout: post
+title: 'Bourbon Neat with default column dropping - UPDATED '
+date: '2013-12-12T11:59:00+00:00'
+tags:
+- bourbon
+- neat
+author: linnea
+tumblr_url: http://blog.seriousfox.co.uk/post/69796009517/bourbon-neat-with-default-column-dropping
+---
+<p>We decided to move away from heavyweight class-based frameworks (like foundation/bootstrap) because </p>
+<ol><li>We&#8217;re wasting a lot of time just having to overwrite the default styling. </li>
+<li>Sometimes class-based grid systems make a designer do this: </li>
+</ol><p><img alt="image" src="https://31.media.tumblr.com/66b549017672d5d046daa017135ae33a/tumblr_inline_mxpe2exGat1ss8b95.png"/></p>
+<p><em>(Bootstrap isn&#8217;t really to blame but it can make things more complicated than they need to be)</em></p>
+<p><img alt="image" src="https://31.media.tumblr.com/32b4cb9283dbadcfa4cc8f7cfb399a70/tumblr_inline_mxpe2kAP0c1ss8b95.png"/></p>
+
+<p>So we settled on bourbon neat - it&#8217;s got exactly what we needed - a grid that we can customize on a per project basis. </p>
+<p>Weaning yourself off Bootstrap can be hard, especially since it is pretty much invaluable for fast prototyping. The one thing I missed the most was not having to worry about my media-queries when it came to columns in a layout - and Bourbon Neat didn&#8217;t seem to come with this feature by default. So I came up with a little workaround. </p>
+<p>Probably not the official way to do it, and if you find a simpler way, let me know! </p>
+<p>I was trying to get my columns to drop to full width on resize like they do in <a href="http://neat.bourbon.io/examples/">http://neat.bourbon.io/examples/</a> without having to write</p>
+{% highlight sass %}
+@include media ($breakpoint-variable) {
+  @include span-columns ($breakpoint-columns);
+}
+{% endhighlight %}
+<p>on every div that I wanted to drop to full width by default on resize, so I came up with a neat little workaround: </p>
+{% highlight sass %}
+@mixin col($col-no, $shift-no, $media, $drop-to, $shift-to) {
+  @include span-columns($col-no);
+  @include shift($shift-no);
+  @include media($media) {
+    @include span-columns($drop-to);
+    @include shift($shift-to);
+	}
+}
+{% endhighlight %}
+<p>Why all the code? Well, ignoring shift will cause major problems if you have collumns within the same outer-container - having the shift outside of this mediaquery definition will offset the next container with an uneven percentage, making it impossible to align any of your columns properly.</p>
+<p>(P.S I suspect I will run into some snags with this solution as well, as my initial attempts at creating this function led to a lot of bafflement with the shift problem, but for now it&#8217;s the best solution I&#8217;ve found)</p>
+
+<p>it will give you a nice bit of control, so for example, this is how we make a 6 column wide div, shifted by 2 columns, that drops to a  5 column with no shift on a tablet screen:</p>
+{% highlight sass %}
+.div {
+  @include col (6, 2, $tablet, 5, 0)
+}
+{% endhighlight %}
+<p>Bang tidy. <em><br/></em></p>
