@@ -1,16 +1,28 @@
 .pagination {
   .left {
     float: left;
+    .pagination-item:before {
+      font-family: 'fontawesome';
+      content: $fa-var-angle-left;
+      display: inline-block;
+      padding-right: $padding-m;
+    }
   }
   .right {
     float: right;
+    .pagination-item:after {
+      font-family: 'fontawesome';
+      content: $fa-var-angle-right;
+      display: inline-block;
+      padding-left: $padding-m;
+    }
   }
 }
 
 .pagination,
 .button {
   font-size: 1rem;
-  font-family: 'Lato', 'Helvetica Neue', Helvetica, sans-serif;
+  font-family: $sans, 'Helvetica Neue', Helvetica, sans-serif;
   font-weight: 300;
   text-align: center;
 }
@@ -19,20 +31,19 @@
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
-  background: #fafafa;
   border-radius: 0.1875em;
-  border: 1px solid #f3f3f3;
-  color: #333333;
-  padding: 1em 1.5em;
+  padding: $padding-xs $padding-l;
+  display: block;
+  color: $seriousfox-color;
+  border: 1px solid transparent;
 }
 
 .pagination .disabled {
-  opacity: 0.5;
+  opacity: 0;
 }
 
 .pagination a:hover, .pagination a:focus {
-  background: white;
-  color: #477dca;
+  border: 1px solid $seriousfox-color;
 }
 
 .pagination a:active {
