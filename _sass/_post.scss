@@ -3,10 +3,8 @@
 //   <a href="{{ site.url }}" class="logo"></a>
 // </header>
 .post-page-header {
-  border-bottom: 1px solid rgba(228, 229, 233, 0.96);
-  margin-bottom: 2rem;
-  min-height: 80px;
-  padding: 0 48px;
+  min-height: 106px;
+  padding-left: 40px;
   .logo {
     position: absolute;
   }
@@ -17,6 +15,7 @@
     padding:0 20px;
   }
 }
+
 // <div class="post">
 //   <a href="{{ post.url | prepend: site.baseurl }}" class="post-link">
 //     <h3 class="post-title">{{ post.title }}</h3>
@@ -30,6 +29,9 @@
 //     </p>
 //   </a>
 // </div>
+.gist .line-numbers {
+  width: $padding-l * 2;
+}
 .post {
   border-bottom: 1px solid rgba(228, 229, 233, 0.96);
   margin-bottom: 3rem;
@@ -53,9 +55,24 @@
     margin: .75rem 0;
   }
 }
-
+.post-header {
+  .post-meta {
+    .post-date {
+      text-align: center;
+      &:after {
+        content: '–'
+      }
+    }
+  }
+}
 .post-meta {
   color: $blue-grey;
+  padding-bottom: 3rem;
+  text-align: center;
+  padding-bottom: 0;
+  text-align: left;
+  width: auto;
+
   .author {
     display:inline-block;
     font-style: italic;
@@ -68,16 +85,23 @@
       vertical-align: middle;
     }
     a {
-      color:$seriousfox-color;
+      .author-name {
+        color:$seriousfox-color;
+        font-weight: $semibold;
+        border-bottom: 1px solid transparent;
+      }
       &:hover {
+        .author-name {
+          border-bottom: 1px solid $seriousfox-color;
+        }
         .author-profile {
           @include transform(scale(1.1, 1.1));
         }
       }
     }
     .author-profile {
-      width: rem(40px);
-      height: rem(40px);
+      width: rem(50px);
+      height: rem(50px);
       border-radius: 50%;
       overflow: hidden;
       display: inline-block;
@@ -88,18 +112,14 @@
     .author-name {
       display: inline-block;
       vertical-align: middle;
-      line-height: rem(40px);
+      @include transition(border 0.2s ease-in-out);
     }
   }
   .post-date {
-    text-align: center;
     font-family: $sans;
-    font-size: rem(12px);
+    font-size: rem(14px);
     line-height: rem(40px);
     &:before {
-      content: '–'
-    }
-    &:after {
       content: '–'
     }
   }
@@ -107,29 +127,118 @@
     display:inline-block;
   }
 
-  padding-bottom: 3rem;
-  text-align: center;
-
-  padding-bottom: 0;
-  text-align: left;
-  width: auto;
 }
 
 // Post Container
 .post-container {
+
   @include media($tablet) {
     padding:0 20px;
   }
   .post-header {
     text-align: center;
-    margin-bottom: 40px;
-    padding-bottom: 40px;
+    padding-bottom: rem(20px);
+    margin-bottom: rem(20px);
     border-bottom: 1px solid rgba(228, 229, 233, 0.96);
+    @include col(10,1,$tablet,9,0);
     h1 {
       padding-bottom: $padding-m;
     }
   }
+  .post-content {
+    @include col(10,1,$tablet,9,0);
+    @extend %article-typography;
+  }
   .post-meta {
     text-align: center;
+  }
+}
+.post-meta {
+  display: inline-block;
+  vertical-align: middle;
+}
+.highlight pre code {
+  font-size: rem(14px);
+}
+
+.highlight + .highlight {
+  margin-top: $padding-m;
+}
+.read-more {
+  font-family: $sans;
+  font-size: rem(12px);
+  margin-top: 20px;
+  display: inline-block;
+  padding: 0 $padding-m;
+  border-radius: 3px;
+  border: 1px solid $fox;
+  float: right;
+  color: $fox;
+  @include transition(all 0.2s ease-in-out);
+  &:hover {
+    background-color: $fox;
+    color: white;
+  }
+}
+@mixin author-button($color) {
+  color: $color;
+  border-color: $color;
+  &:hover {
+    background-color: $color;
+    color: white;
+  }
+}
+
+.post {
+  &.Josh {
+    .post-link:hover {
+      .post-title {
+        color: $josh;
+      }
+    }
+    .read-more {
+      @include author-button($josh);
+    }
+  }
+  &.Alex {
+    .post-link:hover {
+      .post-title {
+        color: $alex;
+      }
+    }
+    .read-more {
+      @include author-button($alex);
+    }
+  }
+  &.Linnea {
+    .post-link:hover {
+      .post-title {
+        color: $linnea;
+      }
+    }
+    .read-more {
+      @include author-button($linnea);
+    }
+  }
+  &.Ale {
+    .post-link:hover {
+      .post-title {
+        color: $ale;
+      }
+    }
+    .read-more {
+      @include author-button($ale);
+    }
+  }
+
+  &.Marin {
+    .post-link:hover {
+      .post-title {
+        color: $marin;
+      }
+    }
+    .read-more {
+      @include author-button($marin);
+    }
   }
 }

@@ -1,8 +1,8 @@
 # Site settings
-title:       The Serious Fox Labs
+title:       The Seriousprints
 email:       your_email@example.com
 author:      Serious Fox HQ
-description: "Writings from the Serious Fox Team, makers of Matterhorn, Meta Trails and superb apps for our clients"
+description: "Writings from the Serious Fox Team: makers of Matterhorn, Meta Trails and superb apps for our clients"
 baseurl:     ""
 url:         "/"
 
@@ -13,26 +13,41 @@ authors:
     display_name: Josh
     email: josh@seriousfox.co.uk
     twitter: joshcrowder
-    avatar: "http://gravatar.com/avatar/a6968fbfb11b00704757be49891ffb80.png"
+    avatar: "/images/team/josh.png"
+    active: ""
   alex:
     name: Alex Handley
     display_name: Alex
     email: alex@seriousfox.co.uk
     twitter: alex_handley
-    avatar: "http://gravatar.com/avatar/df4ba93d4df92bb3fa525a12c015a82b.png"
+    avatar: "/images/team/alex.png"
+    active: ""
   linnea:
     name: Linnea Strid
     display_name: Linnea
     email: linnea@seriousfox.co.uk
     twitter: babolili
-    avatar: "http://www.gravatar.com/avatar/698433e3653ae88d36854dc738b0afa6.png"
+    avatar: "/images/team/linnea.png"
+    active: ""
   marin:
     name: Marin Le Maignan
     display_name: Marin
     email: marin@seriousfox.co.uk
     twitter: seriousfoxhq
-    avatar: "http://gravatar.com/avatar/95fdc8ca33fa2e3d7dacd35dcd1ae8a5.png"
-
+    avatar: "/images/team/marin.png"
+    active: ""
+  ale:
+    name: Alessandro Marin
+    display_name: Alessandro
+    twitter: seriousfoxhq
+    avatar: "/images/team/ale.png"
+    active: ""
+  allison:
+    name: Allison Hadland
+    display_name: Allison
+    twitter: HEREthenThere
+    avatar: "/images/team/fox.png"
+    active: "inactive"
 
 # Google analytics
 google_analytics: UA-44214769-6

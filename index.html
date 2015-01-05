@@ -6,7 +6,7 @@ layout: default
   <div class="posts">
     {% for post in paginator.posts %}
       {% assign author = site.authors[post.author] %}
-      <div class="post">
+      <div class="post {{ author.display_name }}">
         <a href="{{ post.url | prepend: site.baseurl }}" class="post-link">
           <h3 class="h2 post-title">{{ post.title }}</h3>
           <p class="post-summary">{{ post.summary }}</p>
@@ -26,6 +26,9 @@ layout: default
             {{ post.date | date: "%B %-d, %Y" }}
           </div>
         </div>
+        <a href="{{ post.url | prepend: site.baseurl }}" class="read-more">
+          Read this
+        </a>
       </div>
     {% endfor %}
   </div>

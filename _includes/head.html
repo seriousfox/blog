@@ -10,6 +10,7 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}" type="text/css">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
     <!-- Fonts -->
     <script src="//use.typekit.net/uow6epd.js"></script>
@@ -26,6 +27,34 @@
     <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
     <meta property="og:url" content="{{ site.url }}{{ page.url }}">
     <meta property="og:site_name" content="{{ site.title }}">
+
+    <meta name="twitter:card" content="summary">
+    {% if page.author %}
+        <meta name="twitter:creator" content="@{{ site.authors[page.author].twitter }}">
+    {% else %}
+        <meta name="twitter:creator" content="@seriousfoxhq">
+    {% endif %}
+
+    {% if page.title %}
+      <meta name="twitter:title" content="{{ page.title }}">
+    {% else %}
+      <meta name="twitter:title" content="{{ site.title }}">
+    {% endif %}
+    {% if page.url %}
+      <meta name="twitter:url" content="{{ site.url }}{{ page.url }}">
+    {% endif %}
+    {% if page.description %}
+      <meta name="twitter:description" content="{{ page.description }}">
+    {% else %}
+      <meta name="twitter:description" content="{{ site.description }}">
+    {% endif %}
+    {% if page.image %}
+      <meta name="twitter:image:src" content="{{ site.url }}/path/to/image/{{ page.image }}">
+    {% else %}
+      <meta name="twitter:image:src" content="{{ site.url }}/path/to/image/logo.png">
+    {% endif %}
+
+
     <link rel="apple-touch-icon" sizes="57x57" href="apple-touch-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon-114x114.png">
     <link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon-72x72.png">

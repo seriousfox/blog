@@ -60,10 +60,6 @@ h6 {
   font-size: $h6-font-size;
 }
 
-p {
-  margin: 0 0 ($base-spacing / 2);
-}
-
 a {
   @include transition(color 0.1s linear);
   color: $base-link-color;
@@ -111,7 +107,7 @@ pre {
   font-size: 1.125rem;
   line-height: 1.11;
   overflow-x: scroll;
-  margin-bottom: 0.88em;
+  margin: 0px;
 }
 
 blockquote {

@@ -9,16 +9,23 @@ tags:
 - ruby
 - tutorial
 - saveas
+author: marin
 tumblr_url: http://blog.seriousfox.co.uk/post/74182890597/saveas-with-ruby-on-rails
 ---
 <p>Last week while working on a project I had to implement a new feature which allowed users to save as when editing an existing project.</p>
 <p>At first i decided i was going to create some entirely custom controller actions for that, but I soon had realised the complexity of the task. Alex then came up with the <em>Deep Cloneable gem</em> for me to use, and I have to say this has been a very handy one.</p>
 <p>This gem extends the <em>dup</em> method allowing you to select precisely which attributes and relations you want to be cloned.</p>
-<pre><code>@project.dup include: {milestones: :tasks }</code></pre>
+
+{% highlight ruby %}
+  @project.dup include: {milestones: :tasks }
+{% endhighlight %}
+
 <p>Here is how we built it:</p>
 <p>1. Install the gem <a href="https://github.com/moiristo/deep_cloneable">Deep Cloneable</a></p>
 <p>2. Create a controller action.</p>
-<pre><code>  #post method
+
+{% highlight ruby %}
+    #post method
   def save_as
     @cloned_project = @parent_project = Project.find(params[:id])
 
@@ -28,12 +35,14 @@ tumblr_url: http://blog.seriousfox.co.uk/post/74182890597/saveas-with-ruby-on-ra
     if @cloned_project.name == @parent_project.name
       @cloned_project.name = "#{@parent_project.name} (copy)"
     end
-    
+
     if @cloned_project.save!
       redirect_to projects_path
     else
       render :edit
     end
-   end<br/></code></pre>
+   end
+{% endhighlight %}
+
 <p>3. <span>Let&#8217;s Clone!</span></p>
 <p>Marin</p>
