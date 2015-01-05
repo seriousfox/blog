@@ -1,0 +1,32 @@
+.blog-header {
+  margin: 40px 0;
+  padding-bottom: 40px;
+  text-align: center;
+  border-bottom: thin solid $border-color;
+}
+
+.logo {
+  background:url('/images/perfectfox.svg') no-repeat;
+  background-color: $seriousfox-color;
+  display: inline-block;
+  color: rgb(99, 166, 159);
+  width: 150px;
+  height: 150px;
+  background-size: 100%;
+  margin-bottom: $padding-l;
+  @include media(max-width 1200px) {
+    width:100px;
+    height:100px;
+  }
+}
+
+.home {
+  @include col(10,1,$tablet, 9, 0);
+}
+
+.blog-by {
+  font-family: $serif;
+  font-size: rem(16px);
+  font-weight: $regular;
+  font-style: italic;
+}

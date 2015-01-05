@@ -7,36 +7,18 @@
 @import "bourbon/bourbon";
 @import "grid-settings";
 @import "neat/neat";
+@import "mixins";
 @import "variables";
 
 @import "base/base";
 @import "pagination";
 
+@import "home";
 @import "post";
+@import "typography";
 
 .container {
   @include outer-container;
-}
-
-.blog-header {
-  margin: 40px 0;
-  padding-bottom: 40px;
-  text-align: center;
-  border-bottom: thin solid $border-color;
-}
-
-.logo {
-  background:url('/images/perfectfox.svg') no-repeat;
-  background-color: $seriousfox-color;
-  display: inline-block;
-  color: rgb(99, 166, 159);
-  width: 150px;
-  height: 150px;
-  background-size: 100%;
-  @include media(max-width 1200px) {
-    width:100px;
-    height:100px;
-  }
 }
 
 footer {

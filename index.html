@@ -13,10 +13,17 @@ layout: default
         </a>
         <div class="post-meta">
           <div class="author">
-            <a href="{{ author.twitter }}">{{ author.display_name }}</a>
+             <a href="https://twitter.com/{{ author.twitter }}" target="_blank">
+            <span class="author-profile">
+              <img src="{{ author.avatar }}" alt="">
+            </span>
+            <span class="author-name">
+              {{ author.display_name }}
+            </span>
+          </a>
           </div>
           <div class="post-date">
-            {{ post.date | date: "%B %-d, %Y" }}  
+            {{ post.date | date: "%B %-d, %Y" }}
           </div>
         </div>
       </div>

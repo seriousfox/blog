@@ -1,3 +1,27 @@
+$base-font-size: 16px;
+
+@function rem($size) {
+  $remSize: $size / $base-font-size;
+  @return $remSize * 1rem;
+}
+
 $border-color: #f3f3f3;
-$seriousfox-color: rgb(249, 182, 115);;
-$header-font-family: 'brandon-grotesque', "Helvetica Neue", Helvetica, Arial, sans-serif;
+$seriousfox-color: rgb(249, 182, 115);
+$sans: 'Rosario', "Helvetica Neue", Helvetica, Arial, sans-serif;
+$serif: "ff-tisa-web-pro", serif;
+$brand-orange: #F79653;
+
+$blue-grey: #5B5F73;
+
+$padding-l: rem(20px);
+$padding-m: rem(15px);
+$padding-s: $padding-l/2;
+$padding-xs: $padding-l/4;
+
+$thin: 100;
+$light: 300;
+$regular: 400;
+$semibold: 600;
+$bold: 700;
+$heavy: 800;
+$font-black: 900;

@@ -1,0 +1,8 @@
+@mixin col($col-no, $shift-no, $media, $drop-to, $shift-to) {
+  @include span-columns($col-no);
+  @include shift($shift-no);
+  @include media($media) {
+    @include span-columns($drop-to);
+    @include shift($shift-to);
+  }
+}

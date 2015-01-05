@@ -13,21 +13,25 @@ authors:
     display_name: Josh
     email: josh@seriousfox.co.uk
     twitter: joshcrowder
+    avatar: "http://gravatar.com/avatar/a6968fbfb11b00704757be49891ffb80.png"
   alex:
     name: Alex Handley
     display_name: Alex
     email: alex@seriousfox.co.uk
     twitter: alex_handley
+    avatar: "http://gravatar.com/avatar/df4ba93d4df92bb3fa525a12c015a82b.png"
   linnea:
     name: Linnea Strid
     display_name: Linnea
     email: linnea@seriousfox.co.uk
-    twitter: baboli
+    twitter: babolili
+    avatar: "http://www.gravatar.com/avatar/698433e3653ae88d36854dc738b0afa6.png"
   marin:
     name: Marin Le Maignan
     display_name: Marin
     email: marin@seriousfox.co.uk
     twitter: seriousfoxhq
+    avatar: "http://gravatar.com/avatar/95fdc8ca33fa2e3d7dacd35dcd1ae8a5.png"
 
 
 # Google analytics

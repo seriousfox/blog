@@ -38,8 +38,12 @@
   .post-title {
     @include transition(color .2s);
     color:rgba(46, 48, 58, 0.96);
+  }
+  .post-link {
     &:hover {
-      color:$seriousfox-color;
+      .post-title {
+        color: $brand-orange;
+      }
     }
   }
   .post-summary {
@@ -51,28 +55,56 @@
 }
 
 .post-meta {
-  color: rgba(91, 95, 115, 0.96);
+  color: $blue-grey;
   .author {
     display:inline-block;
     font-style: italic;
     &:before {
-      content: 'by';
+      content: 'Written by';
       font-style: italic;
-      margin-right: 5px;
+      margin-right: $padding-xs;
+      line-height: rem(40px);
+      display: inline-block;
+      vertical-align: middle;
     }
-
     a {
       color:$seriousfox-color;
+      &:hover {
+        .author-profile {
+          @include transform(scale(1.1, 1.1));
+        }
+      }
+    }
+    .author-profile {
+      width: rem(40px);
+      height: rem(40px);
+      border-radius: 50%;
+      overflow: hidden;
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: $padding-xs;
+      @include transition(all 0.2s ease-in-out);
+    }
+    .author-name {
+      display: inline-block;
+      vertical-align: middle;
+      line-height: rem(40px);
     }
   }
   .post-date {
-    display:inline-block;
+    text-align: center;
+    font-family: $sans;
+    font-size: rem(12px);
+    line-height: rem(40px);
     &:before {
+      content: '–'
+    }
+    &:after {
       content: '–'
     }
   }
   .tags {
-    display:inline-block; 
+    display:inline-block;
   }
 
   padding-bottom: 3rem;
@@ -93,6 +125,9 @@
     margin-bottom: 40px;
     padding-bottom: 40px;
     border-bottom: 1px solid rgba(228, 229, 233, 0.96);
+    h1 {
+      padding-bottom: $padding-m;
+    }
   }
   .post-meta {
     text-align: center;
