@@ -4,7 +4,7 @@ email:       your_email@example.com
 author:      Serious Fox HQ
 description: "Writings from the Serious Fox Team: makers of Matterhorn, Meta Trails and superb apps for our clients"
 baseurl: "/blog"
-url: "http://blog1.seriousfox.co.uk/"
+url: "http://seriousfox.github.io"
 
 # Authors
 authors:
