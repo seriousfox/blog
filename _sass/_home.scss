@@ -105,3 +105,18 @@
     font-weight: $bold;
   }
 }
+.button {
+  font-family: $sans;
+  margin-top: 20px;
+  display: inline-block;
+  text-align: center;
+  padding: 0 $padding-m;
+  border-radius: 3px;
+  border: 1px solid $seriousfox-color;
+  color: $seriousfox-color;
+  @include transition(all 0.2s ease-in-out);
+  &:hover {
+    background-color: $seriousfox-color;
+    color: white;
+  }
+}

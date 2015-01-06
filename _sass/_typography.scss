@@ -17,11 +17,10 @@ h3 {
 p {
   margin: 0px;
 }
+.center {
+  text-align: center;
+}
 %article-typography {
-  .center {
-    text-align: center;
-  }
-
   .question {
     text-align: left;
     font-family: $serif;
