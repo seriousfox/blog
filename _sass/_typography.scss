@@ -21,6 +21,21 @@ p {
   .center {
     text-align: center;
   }
+
+  .question {
+    text-align: left;
+    font-family: $serif;
+    font-weight: normal;
+    font-size: rem(24px);
+    font-style: italic;
+    &:before {
+      font-family: 'fontawesome';
+      color: $seriousfox-color;
+      content: $fa-var-angle-double-right;
+      padding-right: $padding-m;
+    }
+  }
+
   h2 {
     padding-bottom: $padding-s;
   }
@@ -62,6 +77,9 @@ p {
   p {
     padding-bottom: $padding-l;
     line-height: 1.6;
+
+  }
+  p, h1, h2, h3, h4, h5, ul, ol {
     a {
       color: $josh;
       border-bottom: 1px solid transparent;
@@ -75,6 +93,14 @@ p {
   }
   div + p, div + h1, div + h2, div + h3, div + h4, div + h5 {
     padding-top: $padding-l;
+  }
+  code {
+    background-color: #F0F0F0;
+    border: 1px solid #E8E8E8;
+    font-size: rem(14px);
+  }
+  .highlight code {
+    border: 1px solid transparent;
   }
 
   ul {
@@ -95,6 +121,15 @@ p {
         position: absolute;
         left: 0px;
         top: 0;
+      }
+      ul {
+        li {
+          font-size: rem(16px);
+          &:before {
+            font-size: 8px;
+            color: rgba($blue-grey,.6);
+          }
+        }
       }
     }
   }
@@ -121,7 +156,9 @@ p {
     }
   }
   blockquote {
-    padding: 1.33em;
+    padding-left: $padding-l;
+    padding-top: $padding-s;
+    padding-bottom: $padding-s;
     font-style: italic;
     border-left: 5px solid $seriousfox-color;
     p, h5 {
@@ -131,6 +168,7 @@ p {
       font-size: rem(24px);
     }
   }
+
   &.Josh {
     ol li:before, ul li:before {
       color: $josh;
