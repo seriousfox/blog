@@ -120,3 +120,11 @@
     color: white;
   }
 }
+.half {
+  @include col(6,0, $tablet, 9, 0);
+  @include omega(2n);
+}
+.row {
+  @include clearfix;
+  clear: both;
+}

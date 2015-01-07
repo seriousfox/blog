@@ -46,6 +46,12 @@ authors:
     twitter: HEREthenThere
     avatar: "/images/team/fox.png"
     active: "inactive"
+  team:
+    name: Team Serious Fox
+    display_name: Team
+    twitter: seriousfoxhq
+    avatar: "/images/team/fox.png"
+    active: ""
 
 # Google analytics
 google_analytics: UA-44214769-6

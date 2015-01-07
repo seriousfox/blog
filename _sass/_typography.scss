@@ -42,6 +42,9 @@ p {
   h3 {
     padding-bottom: $padding-s;
   }
+  h4 {
+    padding-bottom: $padding-s;
+  }
   h5 {
     font-family: $serif;
     font-weight: normal;
@@ -66,11 +69,19 @@ p {
       margin-top: $padding-m;
     }
   }
-  .caption {
+  .caption, .aside {
     font-size: rem(14px);
     font-style: italic;
     padding-bottom: $padding-xs;
+    line-height: 1.4;
+  }
+  .aside {
+    max-width: 80%;
+  }
+  .caption {
     text-align: center;
+    padding-left: $padding-xl*2;
+    padding-right: $padding-xl*2;
   }
 
   p {
@@ -106,7 +117,7 @@ p {
     margin: 0px;
     padding-left: 0px;
     list-style-type: none;
-    padding-top: $padding-l;
+    padding-top: $padding-s;
     padding-bottom: $padding-l;
     li {
       position: relative;
@@ -122,6 +133,7 @@ p {
         top: 0;
       }
       ul {
+        padding-bottom: 0px;
         li {
           font-size: rem(16px);
           &:before {

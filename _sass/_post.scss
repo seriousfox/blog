@@ -15,7 +15,60 @@
     padding:0 20px;
   }
 }
-
+.signup-fields {
+  @include col(10,0,$tablet,9,0);
+}
+.signup-button {
+  @include col(2,0,$tablet,9,0);
+}
+#mc_embed_signup {
+  @include clearfix;
+  clear: both;
+}
+.subscribe-wrapper {
+  background-color: #f1f1f1;
+}
+.subscribe {
+  @include col(10,1,$mobile,6,0);
+  padding: $padding-xl 0;
+  &:before, &:after {
+    display: block;
+    clear: both;
+    width: 300px;
+    margin: 0 auto;
+    height: 1px;
+    content: '';
+    background-color: $seriousfox-color;
+  }
+  &:before {
+    margin-bottom: $padding-xl;
+  }
+  &:after {
+    margin-top: $padding-xl;
+  }
+}
+.subscribe-button {
+  background: $seriousfox-color !important;
+  color: white;
+  font-family: $sans;
+  &:hover {
+    background: darken($seriousfox-color, 20%) !important;
+  }
+}
+.signup-header {
+  font-family: $serif;
+  font-weight: normal;
+  font-size: rem(24px);
+  font-style: italic;
+  line-height: 1.6;
+  padding-bottom: $padding-m;
+}
+.signature {
+  padding-top: $padding-m;
+}
+input {
+  font-family: $sans !important;
+}
 // <div class="post">
 //   <a href="{{ post.url | prepend: site.baseurl }}" class="post-link">
 //     <h3 class="post-title">{{ post.title }}</h3>
@@ -140,14 +193,15 @@
     padding-bottom: rem(20px);
     margin-bottom: rem(20px);
     border-bottom: 1px solid rgba(228, 229, 233, 0.96);
-    @include col(10,1,$tablet,9,0);
+    @include col(10,1,$mobile,6,0);
     h1 {
       padding-bottom: $padding-m;
     }
   }
   .post-content {
-    @include col(10,1,$tablet,9,0);
+    @include col(10,1,$mobile,6,0);
     @extend %article-typography;
+    padding-bottom: $padding-xl;
   }
   .post-meta {
     text-align: center;
